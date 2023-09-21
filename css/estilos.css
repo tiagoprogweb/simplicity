@@ -145,11 +145,6 @@ fiquem centralizados e com a cor clara */
 
 
 .destaque h2 {
-    /* clamp(
-        tamanho mínimo,
-        tamanho ideal,
-        tamanho máximo
-    ) */
     font-size: clamp(3rem, 10vw, 7rem);
 }
 
