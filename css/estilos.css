@@ -141,8 +141,11 @@ fiquem centralizados e com a cor clara */
 .destaque h2, .destaque p { 
     text-align: center;
     color: var(--cor-clara);
-}
 
+    animation-name: animaDestaque;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
 
 .destaque h2 {
     font-size: clamp(3rem, 10vw, 7rem);
@@ -152,8 +155,15 @@ fiquem centralizados e com a cor clara */
     font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
-
-
+/* Regra de animação */
+@keyframes animaDestaque {
+    from { 
+        opacity: 0; 
+        transform: translateY(-600px);
+    }
+    
+    to { opacity: 1; }
+}
 
 
 
