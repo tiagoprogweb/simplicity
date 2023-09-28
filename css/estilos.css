@@ -267,13 +267,24 @@ de 570px com as seguintes alterações:
 - Habilitar o flex para a classe "menu"
 - Definir largura de 100% para os itens dentro do "menu"
 - Definir largura de 70% para o nav
-- Reduzir para 200px a altura da imagem contida no artigo Front-End */
+- Reduzir para 150px a altura da imagem contida no artigo Front-End */
+@media screen and (min-width: 570px) {
+    nav h2 { display: none; }
+    .menu { display: flex; }
+    .menu li { width: 100%; }
+    nav { width: 70%; }
+    .front-end img { height: 150px; }
+}
 
 /* 2) Crie uma regra condicional para telas a partir de 900px
 com  as seguintes alterações:
 
 - Aumentar o tamanho geral de todos os textos para 18px 
 - Definir o tamanho máximo da classe limitador para 1000px; */
+@media screen and (min-width: 900px){
+    .limitador { max-width: 900px; }
+    html { font-size: 18px; }
+}
 
 
 
