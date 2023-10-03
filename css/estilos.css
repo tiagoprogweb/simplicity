@@ -312,6 +312,15 @@ tr:nth-child(odd) {
     background-color: var(--cor-clara);
 }
 
+/* Pseudo-elemento  ::before (::after) */
+td:last-child { position: relative; }
+td:last-child::before { 
+    content: "R$ ";
+    position: absolute;
+    left: 10px;
+} 
+
+.conteudo h2::before { content: "👽 "; }
 
 /* Exercícios: regras condicionais (Media Queries) */
 
