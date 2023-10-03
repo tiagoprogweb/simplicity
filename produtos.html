@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Simplicity</title>
+    
+    <!-- CSS Externo -->
     <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- CSS Interno: 
+    No caso de conflito, as regras criadas aqui SEMPRE irão prevalecer. -->
+    <style>
+        .conteudo h2::before { content: "🛒 "; }
+    </style>
 </head>
 <body>
     
@@ -24,7 +32,7 @@
     </header>
 
     <main>
-        <article class="limitador conteudo">
+        <article class="limitador conteudo produtos">
             <h2>Produtos</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita similique ab et inventore a quod fuga rerum. Autem facilis aliquam molestiae quia nisi ipsum voluptatem suscipit veritatis deserunt ratione!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit obcaecati nihil sed vel tempore, aliquid, enim, ipsam accusantium totam iste voluptates illum repellendus? At quaerat voluptas voluptate maxime quasi accusantium?</p>
