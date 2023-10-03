@@ -55,6 +55,7 @@ header .limitador {
 header {
     position: sticky;
     top: 0;
+    z-index: 100;
     background-color: var(--cor-clara);
 }
 
@@ -321,6 +322,30 @@ td:last-child::before {
 } 
 
 .conteudo h2::before { content: "👽 "; }
+
+.galeria { text-align: center; }
+.galeria img {
+    border-radius: 100%;
+    transform: scale(0.9);
+    transition: 0.3s;
+    filter: blur(1px) brightness(150%);
+}
+
+/* Aplicamos o :hover e o :focus ao seletor de tag "a"
+em vez de aplicar no "img". Desta forma, o acionamento funcionará
+tanto com mouse quanto com teclado. */
+.galeria a:hover img, .galeria a:focus img {
+    transform: scale(1);
+    border-radius: 10%;
+    filter: blur(0);
+}
+
+
+
+
+
+
+
 
 /* Exercícios: regras condicionais (Media Queries) */
 
