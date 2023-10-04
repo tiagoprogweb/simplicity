@@ -38,13 +38,13 @@
                 <div>
                     <!-- Nome -->
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" required placeholder="Digite nome completo">
                 </div>
 
                 <div>
                     <!-- e-mail -->
                     <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
                 </div>
 
                 <!-- data de nascimento -->
@@ -62,24 +62,23 @@
                 <!-- assunto -->
                 <div>
                     <label for="assunto">Assunto:</label>
-                    <select name="assunto" id="assunto">
-                        <!-- Deixe um option vazio
-                        de propósito -->
+                    <select name="assunto" id="assunto" required>
                         <option value=""></option>
                         <option>Dúvidas</option>
                         <option>Elogios</option>
                         <option>Reclamações</option>
-                        <option>Outros</option>
+                        <option>Outros</option>                    
                     </select>
                 </div>
 
                 <!-- mensagem -->
                 <div>
                     <label for="mensagem">Mensagem:</label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                    <textarea required name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
                 </div>
 
                 <button type="submit">Enviar dados</button>
+                
             </form>
 
         </article>
