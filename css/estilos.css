@@ -322,10 +322,9 @@ td:last-child::before {
 } 
 
 /* Regra geral do emoji do h2 dentro dos articles conteudo */
-.conteudo h2::before { content: "👽 "; }
-
-.conteudo h2::before { content: "👽 "; }
-.servicos h2::before { content: "🍔 "; }
+.conteudo h2::before { content: "ℹ️ "; }
+.servicos h2::before { content: "🛠️ "; }
+.contato h2::before { content: "📧 "; }
 
 .galeria { text-align: center; }
 .galeria img {
