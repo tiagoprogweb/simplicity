@@ -57,7 +57,7 @@
 <div>
     <label for="cep">CEP: <br><span id="status"></span></label>
     <div id="area-do-cep">
-        <input placeholder="Somente números" type="text" id="cep" name="cep" maxlength="8" inputmode="numeric" required> <br>
+        <input placeholder="Somente números" type="text" id="cep" name="cep" maxlength="9" inputmode="numeric" required> <br>
         <button id="buscar">Buscar</button>
     </div>
 </div>
@@ -117,6 +117,12 @@
             para fins educacionais &copy; <b>Senac Penha</b>
             - <time>2023</time> </p>
     </footer>
+
+    <!-- Importação da biblioteca jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Importação do plugin/extensão jQuery Mask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
     <script src="js/menu.js"></script>
     <script src="js/contato.js"></script>
