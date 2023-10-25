@@ -38,16 +38,16 @@
                 repudiandae quos rerum repellat fugit esse accusamus hic? Aliquid, aspernatur.</p>
 
             <figure class="galeria">
-                <a data-lightbox="fotos" href="imagens/desenvolvimento-web.jpg">''
+                <a data-title="Desenvolvimento de sites" data-lightbox="fotos" href="imagens/desenvolvimento-web.jpg">''
                     <img src="imagens/desenvolvimento-web-mini.jpg" alt="">
                 </a>
-                <a data-lightbox="fotos" href="imagens/design-grafico.jpg">
+                <a data-title="Design gráfico impactante" data-lightbox="fotos" href="imagens/design-grafico.jpg">
                     <img src="imagens/design-grafico-mini.jpg" alt="">
                 </a>
-                <a data-lightbox="fotos" href="imagens/marketing-digital.jpg">
+                <a data-title="Venda e convença" data-lightbox="fotos" href="imagens/marketing-digital.jpg">
                     <img src="imagens/marketing-digital-mini.jpg" alt="">
                 </a>
-                <a data-lightbox="fotos" href="imagens/consultoria-treinamento.jpg">
+                <a data-title="Prepare-se para o mercado" data-lightbox="fotos" href="imagens/consultoria-treinamento.jpg">
                     <img src="imagens/consultoria-treinamento-mini.jpg" alt="">
                 </a>
             </figure>
@@ -84,6 +84,12 @@
 
     <!-- Importação do JS do plugin/extensão Lightbox -->
     <script src="lightbox/js/lightbox.min.js"></script>
+
+    <script>
+        lightbox.option({
+            albumLabel: "Foto %1 de %2"
+        });
+    </script>
 
     <script src="js/menu.js"></script>
 
