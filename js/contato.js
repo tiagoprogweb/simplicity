@@ -22,21 +22,21 @@ $(campoCep).mask("00000-000"); // Exemplo: 03639-000
 
 
 // Detectando o evento de CLICK no botão buscar
-botaoBuscar.addEventListener("click", async function(event){
+botaoBuscar.addEventListener("click", async function (event) {
     event.preventDefault();
-    
+
     let cep; // undefined
 
     /* Verificando se o cep NÃO tem 8 dígitos.
     O operador !== significa "diferente de". */
-    if(campoCep.value.length !== 9){
+    if (campoCep.value.length !== 9) {
         // Alerte o usuário sobre o erro de digitação
         mensagem.textContent = "Digite um CEP válido!";
         mensagem.style.color = "purple";
-        
+
         // Pare a execução
         return;
-    } else { 
+    } else {
         // Caso contrário (ou seja, tem 8 dígitos), guarde o valor
         cep = campoCep.value;
     }
@@ -54,7 +54,7 @@ botaoBuscar.addEventListener("click", async function(event){
     const dados = await resposta.json();
 
     // Etapa 4: lidar com os dados de resposta (em caso de erro ou sucesso)
-    if( "erro" in dados ){
+    if ("erro" in dados) {
         mensagem.textContent = "CEP inexistente!";
         mensagem.style.color = "red";
     } else {
@@ -62,7 +62,7 @@ botaoBuscar.addEventListener("click", async function(event){
         mensagem.style.color = "blue";
 
         const exemplos = document.querySelectorAll(".exemplo");
-        for(const exemplo of exemplos){
+        for (const exemplo of exemplos) {
             exemplo.classList.remove("exemplo");
         }
 
@@ -72,3 +72,36 @@ botaoBuscar.addEventListener("click", async function(event){
         campoEstado.value = dados.uf;
     }
 });
+
+
+
+/* Programação do Formspree */
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: formulario.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Seus dados foram enviados! Aguarde retorno.";
+            formulario.reset()
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                    status.innerHTML = "Deu ruim! Algo de errado não está certo!"
+                }
+            })
+        }
+    }).catch(error => {
+        status.innerHTML = "Deu ruim! Algo de errado não está certo!"
+    });
+}
+formulario.addEventListener("submit", handleSubmit)
